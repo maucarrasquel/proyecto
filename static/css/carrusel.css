@@ -1,0 +1,146 @@
+/*---CARRUSEL----*/
+.h22{
+  margin-bottom:3rem;
+  color:white;
+  margin-top:2rem ;
+}
+#h22{
+  color:black;
+}
+#carrusel-p{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+  padding:3rem;
+  top:50rem;
+  height:auto;
+
+}
+#carrusel-p::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Color negro translúcido */
+}
+
+.carrusel-list{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:fit-content;/*?????*/
+  height:304px;
+  padding:10px 0px;
+  margin:0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+.carrusel-track{
+  position:relative;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+}
+.carrusel{
+  position:relative;
+  width:210px;
+  padding:0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+
+
+.carrusel div:hover{
+  background:rgb(222, 213, 196,.2);
+  border-radius: 10px;
+
+}
+.h44{
+display: block;
+position: absolute;
+text-align: center;
+width: 100%;
+height:50px;
+top:8rem;
+left:0;
+z-index:3;
+color:black;
+font-size: 1.8rem; 
+font-style: italic;
+} 
+.position-img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index:2;
+}
+.h4{
+display:none;
+}
+.imagenCa{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index:2;
+}
+
+.carrusel a img{
+  object-fit: cover;/*??????*/
+  height:300px;
+  width:200px;
+  border-radius:10px;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.5);
+  transition:.3s ease-in-out;
+}
+@media(min-width:768px){
+  .carrusel{
+    width: 275px;
+  }
+  .carrusel a img{
+    width: 250px;
+  }
+}
+
+.carrusel-arrow{
+  border-radius:30px;
+  background:white;
+  position: absolute;
+  z-index:4;
+  width:48px;
+  height: 48px;
+  text-align: center;
+  border:0;
+  cursor:pointer;
+}
+
+.carrusel-arrow:focus{
+  outline:0;/*???????*/
+}
+
+.carrusel-arrow svg{
+  width: 12px;
+  height: 100%;
+  color:rgba(0,0,0,.7);
+}
+.carrusel-prev{
+  left:0;
+}
+.carrusel-next{
+  right:0;
+}
