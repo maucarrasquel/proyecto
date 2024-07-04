@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>tabla</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="style2.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="tabla.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <header class="site-header">
+    <div class="container">
+      <div class="bar">
+        <a href="/">
+          <h1 class="no-margin">Productos</h1>
+        </a>
+        <nav class="navigator">
+          <a href="/productos">Productos</a>
+          <a href="/categorias">Categorias</a>
+          <a href="/contacto">Compras</a>
+          <a href="/favoritos">Favaritos</a>
+          <a href="/">Cerrar</a>
+        </nav>
+      </div><!--bar-->
+     
+    </div><!--container-->
+  </header><!-- Header -->
+
+       <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>codigo</th>
+          <th>producto</th>
+          <th>categoria_id</th>
+          <th>existencia_actual</th>
+          <th>precio</th>
+          <th><a href="/agregarProducto"><img width="33" src="/icon/add.png"></a></th>
+      </tr>
+      </thead>
+      <tbody>
+        <% for(let x = 0; x < p.length;x++){ %>
+        <tr>
+          <td><%=p[x].id%></td>
+          <td><%=p[x].codigo%></td>
+          <td><%=p[x].producto%></td>
+          <td><%=p[x].categoria_id%></td>
+          <td><%=p[x].existencia_actual%></td>
+          <td><%=p[x].precio%></td>
+          <td>
+            <a href="/updateProducto/<%=p[x].id%>"><img width="33" src="/icon/update.png"></a>
+            <a href="/deleteProducto/<%=p[x].id%>"><img width="33" src="/icon/delete.png"></a>
+          </td>
+          
+        </tr>
+        <% } %>
+        <!-- Agrega más filas según sea necesario -->
+      </tbody>
+    </table>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>
+
